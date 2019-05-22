@@ -22,14 +22,10 @@ def getd4():
 
 
 def get_userdetails():
-    consumer_key = 'x2Ln6UagFdQt4uX7IRkvOyK4F'
-    consumer_secret = 'NbZk8qJ54Oczx5juE1MkU2RFv8zZyDGHvonDEbEKg0x48QtPd9'
-    access_token = '2642633694-dfwTS6CQEppxPfMeHZWE8pkq59BDovjibWjE5yA'
-    access_token_secret = 'popprfHATFtgEvfEpCORLh6hlHAHhL18RMtLCwOC74M3t'
-    # consumer_key = getd1()
-    # consumer_secret = getd2()
-    # access_token = getd3()
-    # access_token_secret = getd4()
+    consumer_key = getd1()
+    consumer_secret = getd2()
+    access_token = getd3()
+    access_token_secret = getd4()
     try:
         auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
         auth.set_access_token(access_token, access_token_secret)
