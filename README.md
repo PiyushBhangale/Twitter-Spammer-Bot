@@ -15,7 +15,7 @@ access_token = 'access token'
 access_token_secret = 'access token secret'
 
 ```
-To retweet,favourite a tweet or to follow your followers run the following script.
+##### To retweet,favourite a tweet or to follow your followers run the following script.
 ```
 sudo python3 tweet-bot.py
 ```
@@ -30,7 +30,7 @@ sudo python3 tweet-bot.py
 ![alt text](https://github.com/PiyushBhangale/Twitter-Bot/blob/master/Screenshot%20from%202019-05-23%2021-30-05.png)
 
 
-To spam a users profile with n number of tweets run the following script.
+##### To spam a users profile with n number of tweets run the following script.
 ```
 sudo python3 spamteets.py
 ```
