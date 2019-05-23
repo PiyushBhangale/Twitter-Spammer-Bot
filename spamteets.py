@@ -1,13 +1,39 @@
 import tweepy
 import tkinter
 from tkinter import *
-consumer_key = 'x2Ln6UagFdQt4uX7IRkvOyK4F'
-consumer_secret = 'NbZk8qJ54Oczx5juE1MkU2RFv8zZyDGHvonDEbEKg0x48QtPd9'
-access_token = '2642633694-dfwTS6CQEppxPfMeHZWE8pkq59BDovjibWjE5yA'
-access_token_secret = 'popprfHATFtgEvfEpCORLh6hlHAHhL18RMtLCwOC74M3t'
-auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-auth.set_access_token(access_token, access_token_secret)
-api = tweepy.API(auth)
+
+
+def getd1():
+    return d1.get()
+
+
+def getd2():
+    return d2.get()
+
+
+def getd3():
+    return d3.get()
+
+
+def getd4():
+    return d4.get()
+
+
+def get_userdetails():
+    consumer_key = getd1()
+    consumer_secret = getd2()
+    access_token = getd3()
+    access_token_secret = getd4()
+    try:
+        auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+        auth.set_access_token(access_token, access_token_secret)
+        api = tweepy.API(auth)
+        user = api.me()
+        print("welcome"+user.name)
+    except tweepy.TweepError as e:
+        print(e.response)
+
+    return api
 
 
 def get_lab2():
@@ -27,6 +53,7 @@ def get_labd5():
 
 
 def spamUser():
+    api = get_userdetails()
     no = get_labd5()
     for i in range(int(no)):
 
@@ -38,6 +65,31 @@ def spamUser():
 
 
 root = Tk()
+root.title('Tweet bot')
+l1 = Label(root, text="consumer_key")
+l1.pack()
+d1 = Entry(root, bd=5)
+d1.pack()
+
+l2 = Label(root, text="consumer_secret")
+l2.pack()
+d2 = Entry(root, bd=5)
+d2.pack()
+
+l3 = Label(root, text="access_token")
+l3.pack()
+d3 = Entry(root, bd=5)
+d3.pack()
+
+l4 = Label(root, text="access_token_secret")
+l4.pack()
+d4 = Entry(root, bd=5)
+d4.pack()
+
+submit = Button(root, text="Get User", command=get_userdetails)
+submit.pack()
+
+
 lab1 = Label(root, text="Spam a user")
 lab1.pack()
 
