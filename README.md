@@ -19,9 +19,9 @@ To retweet,favourite a tweet or to follow your followers run the following scrip
 ```
 sudo python3 tweet-bot.py
 ```
-  - Fill in the _consumer_key,consumer_secret, access_token and access_token_secret_ and click **Get User** authenticate button to authenticate.
+  - Fill in the _consumer_key,consumer_secret, access_token and access_token_secret_ and click _**Get User**_ authenticate button to authenticate.
  
-  - Fill the _reply, retweet, favourite and follow_ with a response **yes** for the respective functionality to be performed. Here follow with a **yes** response wil follow all of your followers.
+  - Fill the _reply, retweet, favourite and follow_ with a response _**yes**_ for the respective functionality to be performed. Here follow with a _**yes**_ response wil follow all of your followers.
 
   - The _search_ needs to be filled with the _keyword_ regarding which the tweets will be fetched.
 
